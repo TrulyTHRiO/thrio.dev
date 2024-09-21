@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town Crier</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <span id="navbar">
+        <span id="left-button-container" class="button-container">
+            <button id="seat-add" class="soft-button">+</button>
+            <span id="seat-counter">0</span>
+            <button id="seat-move" class="soft-button">-</button>
+        </span>
+        <span id="day-display">
+            <button id="day-back" class="day-button hidden">&lt</button>
+            <span id="day-counter">DAY 1</span>
+            <button id="day-forward" class="day-button">&gt</button>
+        </span>
+        <span id="right-button-container" class="button-container">
+            <button id="show-all" class="soft-button">✓</button>
+            <button id="options" class="soft-button">✗</button>
+        </span>
+    </span>
+
+    <div id="town-square">
+        <div id="nomination-menu" class="hidden">
+            <div id="nomination-text">ME NOMINATES YOU</div>
+            <div id="nomination-buttons">
+                <button id="cancel-nomination">CANCEL</button>
+                <button id="submit-nomination">SUMBIT</button>
+            </div>
+        </div>
+        <div id="nomination-list" class="hidden"></div>
+        <div id="seating-area">
+            <div id="seats">
+                <!-- <seat></seat> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

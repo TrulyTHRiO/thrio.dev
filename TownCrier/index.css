@@ -1,0 +1,243 @@
+* {
+    overflow-x: hidden;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(63, 63, 63);
+    margin: 0;
+    overflow: hidden;
+}
+
+input {
+    user-select: auto;
+}
+
+seat {
+    box-sizing: border-box;
+    display: flex;
+    /* height: 16dvmin;
+    width: 16dvmin; */
+    border-radius: 100%;
+    border: 0.5dvmin wheat solid;
+    background-color: wheat;
+    position: absolute;
+    /* left: -8dvmin;
+    top: -8dvmin; */
+    /* transform: rotate(120deg); */
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+}
+
+seat.selected {
+    border: 0.5dvmin hotpink solid;
+}
+
+seat.voting {
+    border: 0.5dvmin black solid;
+}
+
+.nametag {
+    margin: 0;
+    padding: 0;
+    height: 25%;
+    min-width: 20%;
+    max-width: 200%;
+    field-sizing: content;
+    position: absolute;
+    background-color: gainsboro;
+    font-size: 3.5dvmin;
+    top: 105%;
+    text-align: center;
+
+    z-index: 3;
+}
+
+seat.tiny {
+    height: 10dvmin;
+    width: 10dvmin;
+    left: -5dvmin;
+    top: -5dvmin;
+}
+
+seat.small {
+    height: 12dvmin;
+    width: 12dvmin;
+    left: -6dvmin;
+    top: -6dvmin;
+}
+
+seat.medium {
+    height: 15dvmin;
+    width: 15dvmin;
+    left: -7.5dvmin;
+    top: -7.5dvmin;
+}
+
+seat.large {
+    height: 18dvmin;
+    width: 18dvmin;
+    left: -9dvmin;
+    top: -9dvmin;
+}
+
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.button-container {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.soft-button {
+    /* width: 40px;
+    height: 40px; */
+}
+
+.soft-button, .day-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 6dvmin;
+    transition: padding-bottom 0.05s linear;
+}
+
+.soft-button:hover, .day-button:hover {
+    padding-bottom: .6dvmin;
+}
+
+#navbar {
+    position: fixed;
+    width: 100dvw;
+    height: 10dvh;
+    min-height: 10dvh;
+    max-height: 10dvh;
+    overflow: hidden;
+    padding: 5px;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#day-display {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    align-items: center;
+}
+
+#seat-counter {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6dvmin;
+    padding: 0dvw;
+    text-align: center;
+}
+
+#day-counter {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6dvmin;
+    padding: 2dvw;
+    text-align: center;
+}
+
+#town-square {
+    position: fixed;
+    top: 10dvh;
+    height: 90dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nomination-menu {
+    border-radius: 0.5dvmin;
+    position: absolute;
+    align-self: center;
+    width: 40dvmin;
+    height: 10dvmin;
+    /* transform: translateY(47dvmin); */
+    /* top: 47dvmin; */
+    background-color: white;
+    transition: background-color 0.1s linear;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2dvmin;
+
+    z-index: 2;
+}
+
+#nomination-menu.hidden {
+    background-color: transparent;
+}
+
+#nomination-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    z-index: 3;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2dvmin;
+
+}
+
+#nomination-list.hidden {
+    display: none;
+}
+
+#nomination-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+}
+
+#nomination-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+
+#nomination-buttons > button {
+    font-size: 2dvmin;
+    height: min-content;
+}
+
+#seating-area {
+    height: 90dvmin;
+    width: 90dvmin;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* overflow: visible; */
+}
+
+#seats {
+    margin-top: 2dvmin;
+    height: 80dvmin;
+    width: 80dvmin;
+    position: absolute;
+    overflow: visible;
+}
