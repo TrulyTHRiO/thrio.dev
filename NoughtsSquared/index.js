@@ -4,7 +4,7 @@ const createText = document.getElementById("createText")
 const codeField = document.getElementById("codeField")
 const createGame = document.getElementById("createGame")
 const codeBox = document.getElementById("codeBox")
-const SERVER = "https://noughtssquared.thrio.dev:5073"
+const SERVER = "https://linode.thrio.dev:5073"
 const codeCharSet = "ABCDEFGHJKLMNOPQRSTUVWXYZ1234567890"
 const loading = `<div class="loader"></div>`
 
