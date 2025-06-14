@@ -27,7 +27,7 @@ function JoinGameHandler() {
     } else {
         ResetCreateClick()
         ResetJoinClick()
-        window.location.href = "https://chessarmies.com/play.html"
+        window.location.href = "https://thrio.dev/ChessArmies/play.html"
     }
 }
 
@@ -46,7 +46,7 @@ function SendEnteredCode() { // sends the code entered into the code box to the 
             gameCode: codeField.value,
         }
         var enterCodeReq = new XMLHttpRequest() // sets up the HTTPS request
-        enterCodeReq.open("POST", "https://home.chessarmies.com:5074")
+        enterCodeReq.open("POST", "https://linode.thrio.dev:5072")
         enterCodeReq.withCredentials = true
         joinGameClick.innerHTML = loading
         joinGameClick.children[0].classList.add("lr")
@@ -110,7 +110,7 @@ createGameOnclick = function() {
     createGame.children[0].classList.add("lc")
     createGame.onclick = null
     var joinGameReq = new XMLHttpRequest()
-    joinGameReq.open("POST", "https://home.chessarmies.com:5074")
+    joinGameReq.open("POST", "https://linode.thrio.dev:5072")
     joinGameReq.withCredentials = true
     joinGameReq.addEventListener("load", JoinGameHandler)
     joinGameReq.addEventListener("abort", ResetCreateClick)

@@ -15,7 +15,7 @@ function GetCookies() { // gets stored cookies
     var UUID = cookies.UUID
     var gameCode = cookies.gameCode
     if (UUID == undefined || gameCode == undefined) {
-        window.location.href = "https://chessarmies.com/"
+        window.location.href = "https://thrio.dev/ChessArmies/"
     } else {
         document.getElementById("code").innerHTML = gameCode
         var sendReq = true

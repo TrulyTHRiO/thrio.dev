@@ -105,7 +105,7 @@ class queen extends piece {
         super(tile, colour)
         this.pos = tile
         this.colour = colour
-        this.img = "pieces/"+(colour == "w" ? "white-queen.png" : "black-queen.jpg")
+        this.img = "pieces/"+(colour == "w" ? "white-queen.png" : "black-queen.png")
     }
 
     type = "Q"
@@ -138,7 +138,7 @@ class king extends piece {
         super(tile, colour)
         this.pos = tile
         this.colour = colour
-        this.img = "pieces/"+(colour == "w" ? "white-king.png" : "black-king.jpg")
+        this.img = "pieces/"+(colour == "w" ? "white-king.png" : "black-king.png")
     }
 
     moved = false
